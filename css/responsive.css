@@ -1,0 +1,123 @@
+/* =========================================
+   MEDIA QUERIES (Diseño Responsivo)
+   ========================================= */
+
+/* Tablet y dispositivos medianos (hasta 980px) */
+@media (max-width: 980px) {
+    .menu-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    /* Las 3 barras del ícono hamburguesa */
+    .menu-toggle-barra {
+        display: block;
+        width: 26px;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--texto, #1a1a1a);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Animación a "X" cuando el menú está abierto */
+    .menu-toggle.activo .menu-toggle-barra:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.activo .menu-toggle-barra:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.activo .menu-toggle-barra:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0 4%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        background: var(--blanco);
+        border-bottom: 1px solid var(--borde);
+        box-shadow: var(--sombra);
+        transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
+    }
+
+    .nav.abierto {
+        max-height: 600px;
+        opacity: 1;
+        padding: 14px 4%;
+    }
+
+    .nav a { padding: 11px 0; }
+    .nav .btn { margin-top: 8px; }
+
+    /* Submenú desplegable "Servicios" en móvil */
+    .dropdown { display: flex; flex-direction: column; }
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding-left: 14px;
+        background: transparent;
+    }
+    .dropdown-menu.show { display: flex; flex-direction: column; }
+    .dropdown-menu li a { padding: 9px 0; }
+
+    /* Ajustes de columnas */
+    .hero-grid, 
+    .grid-2, 
+    .grid-3, 
+    .grid-4, 
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 { font-size: 40px; }
+}
+
+/* Dispositivos móviles (hasta 720px) */
+@media (max-width: 720px) {
+    .seccion { padding: 52px 0; }
+    .hero { padding: 54px 0; }
+
+    /* Forzar una sola columna */
+    .hero-grid, 
+    .grid-2, 
+    .grid-3, 
+    .grid-4, 
+    .galeria, 
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1, .pagina-banner h1 { font-size: 34px; }
+    .titulo-seccion { font-size: 29px; }
+    .marca span { max-width: 160px; line-height: 1.2; }
+    .formulario { padding: 22px; }
+}
+
+/* Dispositivos muy pequeños (hasta 430px) */
+@media (max-width: 430px) {
+    .header .contenedor { min-height: 72px; }
+    .marca img { width: 42px; height: 42px; }
+    .nav { top: 72px; }
+
+    .hero h1, .pagina-banner h1 { font-size: 30px; }
+    .btn { width: 100%; }
+}

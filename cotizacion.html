@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cotización | Agencia de Publicidad</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="contenedor">
+                <a class="marca" href="index.html">
+                    <img src="img/logo/logo.png" alt="Logo">
+                    <span>CreativeAdsStudio </span>
+                </a>
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span class="menu-toggle-barra"></span>
+                    <span class="menu-toggle-barra"></span>
+                    <span class="menu-toggle-barra"></span>
+                </button>
+                <nav class="nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="portafolio.html">Portafolio</a>
+                    <a href="clientes.html">Clientes</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="precios.html">Precios</a>
+                    <a href="faq.html">FAQ</a>
+                    <a class="btn btn-secundario" href="contacto.html">Contáctanos</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="barra-marquee">
+            <div class="marquee-contenido">
+                ✦ Creatividad sin límites ✦ &nbsp;&nbsp;
+                ✦ Estrategia que funciona ✦ &nbsp;&nbsp;
+                ✦ 5 años transformando marcas ✦ &nbsp;&nbsp;
+                ✦ Hecho en Arequipa, Perú ✦
+            </div>
+        </div>
+
+        
+        <section class="hero">
+            <div class="contenedor hero-grid">
+                <div>
+                    <h1>Solicitar Cotización</h1>
+                    <p>
+                        Completa el formulario y recibe una cotización personalizada según los servicios que mejor se adapten a las necesidades de tu empresa.
+                    </p>
+                </div>
+
+                <div class="hero-imagen">
+                    <img src="img/banners/creatividad.png" alt="Solicitar Cotización">
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <section class="seccion">
+                <div class="contenedor">
+                    <form class="formulario" id="formulario-cotizacion">
+
+                        <div class="campo">
+                            <label for="servicio">Servicio</label>
+                            <select id="servicio" required>
+                                <option value="">Selecciona</option>
+                                <option value="diseno">Diseño</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="merchandising">Merchandising</option>
+                                <option value="mercado">Estudio de Mercado</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="cantidad">Cantidad</label>
+                            <input id="cantidad" type="number" min="1" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="tipo">Tipo de proyecto</label>
+                            <select id="tipo" required>
+                                <option value="">Selecciona</option>
+                                <option value="simple">Simple</option>
+                                <option value="medio">Medio</option>
+                                <option value="completo">Completo</option>
+                            </select>
+                        </div>
+
+                        <p class="resultado-cotizacion" id="resultado-cotizacion">El resultado aparecerá aquí.</p>
+
+                        <button class="btn btn-secundario" type="submit">Calcular</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="contenedor">
+                <div class="footer-grid">
+                    <div>
+                        <h3>Agencia de Publicidad</h3>
+                        <p>Ideas claras, diseños creativos y campañas sencillas.</p>
+                    </div>
+                    <div>
+                        <h4>Contacto</h4>
+                        <p>Av. Creatividad 123, Arequipa</p>
+                        <p>contacto@agenciapublicidad.com</p>
+                        <p>+51 999 888 777</p>
+                    </div>
+                    <div>
+                        <h4>Redes sociales</h4>
+                        <p>Facebook | Instagram | LinkedIn</p>
+                        <p><a href="cotizacion.html">Solicitar cotización</a></p>
+                    </div>
+                </div>
+                <p class="footer-copy">2026 Agencia de Publicidad. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+        <script src="js/formulario.js"></script>
+    </body>
+</html>
